@@ -1,4 +1,3 @@
-import java.util.Scanner;
 /*
  * @Description:
  * 颜色分类
@@ -14,12 +13,18 @@ import java.util.Scanner;
  * 输入：nums = [2,0,1]
  * 输出：[0,1,2]
  */
+
 public class L2022211939_13_Test {
     public static void main(String[] args) {
+        // 三种颜色，每种多个
         testSortColors(new int[]{2, 0, 2, 1, 1, 0}, new int[]{0, 0, 1, 1, 2, 2});
+        // 三种颜色，每种一个
         testSortColors(new int[]{2, 0, 1}, new int[]{0, 1, 2});
+        // 只有红色
         testSortColors(new int[]{0}, new int[]{0});
+        // 只有白色
         testSortColors(new int[]{1}, new int[]{1});
+        // 好多颜色
         testSortColors(new int[]{2, 2, 2, 1, 1, 0, 0, 0}, new int[]{0, 0, 0, 1, 1, 2, 2, 2});
     }
 
@@ -36,6 +41,7 @@ public class L2022211939_13_Test {
         System.out.println("Test " + (passed ? "passed" : "failed"));
     }
 }
+
 class Solution {
     public void sortColors(int[] nums) {
         int n = nums.length;
